@@ -24,7 +24,7 @@ class State:
 
     def __lt__(self, other):
         # needed so heapq doesn't crash when two states have the same priority
-        return self.pegs <= other.pegs
+        return self.pegs < other.pegs
 
     def __repr__(self):
         return f"State({self.pegs})"
